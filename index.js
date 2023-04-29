@@ -11,7 +11,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 
 
 app.get('/',function(req,res){
-    res.sendFile(__dirname +'/signup.html');
+    res.sendFile(__dirname +'/index.html');
 
     
 });
@@ -39,7 +39,7 @@ app.post('/',function(req,res){
 
     const options = {
         method:'POST',
-        auth:'santosh9515:dfe1b18887b3c5e1890f8500c74cbc44-us21'
+        auth:'santosh9515:'+APP_API_KEY
     };
 
     const request = https.request(url,options,function(response){
@@ -60,7 +60,7 @@ app.post('/',function(req,res){
 });
 
 app.post('/failure',function(req,res){
-    res.sendFile(__dirname+'/signup.html');
+    res.sendFile(__dirname+'/index.html');
 });
 
 
@@ -73,5 +73,3 @@ app.post('/failure',function(req,res){
 
 
 app.listen(3000);
-//dfe1b18887b3c5e1890f8500c74cbc44-us21
-//3d64ade3bb
